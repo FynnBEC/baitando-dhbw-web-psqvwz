@@ -16,25 +16,29 @@
     </header>
 
     <main class="fixed-width">
-      <img src="img/banner.png" />
-      <div class="features">
-        <div class="feature">
-          <img src="img/counter_dark.png" />
-          <p class="feature-title">Erfassung der Zählerstände</p>
-          <p class="feature-description">
-            Mauelle Erfassung der Zählerstände oder wahlweiser Abruf diereckt
-            vom Netzbetreiber.
-          </p>
+      <div class="headline">
+        <h1>Zählerstände erfassen</h1>
+      </div>
+      <form>
+        <div class="create-grp-due">
+          <label for="due">Datum*</label>
+          <p>Tragen Sie hier das Ablesedatum der Zählerstandes ein.</p>
+          <input id="due" type="date" />
         </div>
 
-        <div class="feature">
-          <img src="img/energy-consumption_dark.png" />
-          <p class="feature-title">Ermittlung des Verbrauchers</p>
-          <p class="feature-description">
-            Automatische Ermittlung des Verbrauchs anhand der erfassten
-            Zälerstände.
+        <div class="create-grp-title">
+          <label for="title">Zählerstand in kWh*</label>
+          <p>
+            Tragen Sie hier den abgelesenen Zählerstand in der Einheit kWh ein.
           </p>
+          <input id="title" type="text" />
         </div>
+      </form>
+      <div class="create-grp-actions">
+        <a href="liste.html">
+          <button class="disabled-button">Abbrechen</button>
+        </a>
+        <a href="liste.html"><button>Speichern</button></a>
       </div>
     </main>
 
