@@ -3,6 +3,7 @@
   <head>
     <title>POWERTRACK</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/verwaltung.css" />
   </head>
   <body>
     <header class="fixed-width">
@@ -10,38 +11,25 @@
         <img src="img/powertrack_logo.png" />
       </a>
       <nav>
-        <a href="liste.html">Startseite</a>
-        <a href="preise.html">App</a>
+        <a href="index.html">Startseite</a>
+        <a href="verwaltung.html">App</a>
       </nav>
     </header>
 
     <main class="fixed-width">
-      <div class="headline">
-        <h1>Zählerstände verwalten</h1>
+      <div class="administration-head">
+        <h1>Z&auml;hlerst&auml;nde verwalten</h1>
+
         <a href="erfassung.html">
-          <button>Neuen Zählerstand erfassen</button>
+          <button class="button-head">
+            Neuen Z&auml;hlerst&auml;nd erfassen
+          </button>
         </a>
       </div>
 
-      <ul class="list-alltasks">
-        <li>
-          <div class="list-task-responsible">
-            <img src="img/calendar.png" />
-            <p>Datum</p>
-            <p></p>
-          </div>
-
-          <div class="list-task-responsible">
-            <img src="img/counter_dark.png" />
-            <p>kWh</p>
-          </div>
-
-          <div class="list-task-responsible">
-            <img src="img/energy-consumption_dark.png" />
-            <p>kWh</p>
-          </div>
-        </li>
-      </ul>
+      <div class="administration-body">
+        <ul class="list-alltasks" id="tasks"></ul>
+      </div>
     </main>
 
     <footer>
@@ -60,5 +48,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/liste.js"></script>
   </body>
 </html>

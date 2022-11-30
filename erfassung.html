@@ -3,8 +3,9 @@
   <head>
     <title>POWERTRACK</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/erfassung.css" />
   </head>
-  <body>
+  <body onload="initialize()">
     <header class="fixed-width">
       <a href="index.html">
         <img src="img/powertrack_logo.png" />
@@ -21,24 +22,26 @@
       </div>
       <form>
         <div class="create-grp-due">
-          <label for="due">Datum*</label>
+          <label for="Date_input">Datum*</label>
           <p>Tragen Sie hier das Ablesedatum der Zählerstandes ein.</p>
-          <input id="due" type="date" />
+          <input id="Date_input" type="date" />
         </div>
 
         <div class="create-grp-title">
-          <label for="title">Zählerstand in kWh*</label>
+          <label for="counter_input">Zählerstand in kWh*</label>
           <p>
             Tragen Sie hier den abgelesenen Zählerstand in der Einheit kWh ein.
           </p>
-          <input id="title" type="text" />
+          <input id="counter_input" type="text" />
         </div>
       </form>
       <div class="create-grp-actions">
-        <a href="liste.html">
+        <a href="verwaltung.html">
           <button class="disabled-button">Abbrechen</button>
         </a>
-        <a href="liste.html"><button>Speichern</button></a>
+        <a href="verwaltung.html">
+          <button onclick="save()" id="save-btn">Speichern</button></a
+        >
       </div>
     </main>
 
@@ -58,5 +61,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/common.js"></script>
+    <script src="js/anlage.js"></script>
   </body>
 </html>
